@@ -1,7 +1,8 @@
-from __future__ import print_function
+# from __future__ import print_function
 from pyspark import SparkContext
 from pyspark.mllib.feature import HashingTF, IDF
 sc = SparkContext(appName = "twitter-stream")
+path = '/Users/cathyq/code/twitter-streaming/twitter_output'
 
 # Read a set of text files as TF vectors
 rdd = sc.wholeTextFiles("data").map(lambda (name, text): text.split())
@@ -12,4 +13,6 @@ tfVectors = tf.transform(rdd).cache()
 idf = IDF()
 IDFModel = idf.fit(tfVectors)
 tfIdfVectors = IDFModel.transform(tfVectors)
-tfIdfVectors.foreach(print)
+# tfIdfVectors.foreach(print)
+tfIdfVectors.saveAsTextFile(path)
+
