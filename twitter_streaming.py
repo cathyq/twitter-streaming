@@ -6,10 +6,10 @@ import signal
 
 
 #consumer key, consumer secret, access token, access secret.
-ckey="Auc1c0rIYsqWDQeZ02eN0hX9Q"
-csecret="amOy7BHD8UDJNQdHwKk93EXvtwUpSFvzoi4ZRstjvdPssdzPB2"
-atoken="153439125-Jgqf3PjXO2d9K6DZEkXGvz5rInIXhNgtUwGD9Ym9"
-asecret="OEkNZYQFFmicsQgJ3a5dvPTV416jcwQQkl0vOjGbSTGh6"
+ckey="#####################"
+csecret="#################################"
+atoken="##########################"
+asecret="##################################"
 
 class StdOutListener(StreamListener):
 
